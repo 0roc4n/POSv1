@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-
+import { RouterModule } from '@angular/router';
 export const routes: Routes = [
   {
     path: 'home',
@@ -7,7 +7,15 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'landing',
     pathMatch: 'full',
+  },
+  {
+    path: 'landing',
+    loadComponent: () => import('./pages/landing/landing.page').then( m => m.LandingPage)
+  },
+  {
+    path: 'login',
+    loadComponent: () => import('./pages/login/login.page').then( m => m.LoginPage)
   },
 ];
