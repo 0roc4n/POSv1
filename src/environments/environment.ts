@@ -11,7 +11,7 @@ export const environment = {
     storageBucket: "tsg-pos.firebasestorage.app",
     messagingSenderId: "315315097243",
     appId: "1:315315097243:web:955e113c83b3ac74f7803e"
-  };
+  }
 };
 
 
