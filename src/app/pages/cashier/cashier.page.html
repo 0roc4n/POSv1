@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>TSG-POS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="border-2 mx-5 my-2 rounded-xl px-5 flex space-x-5">
+    <i class="fa-solid fa-magnifying-glass text-2xl mt-2" ></i>
+    <ion-input placeholder="Search Products"></ion-input>
+  </div>
+
+  <ion-row>
+    @for(item of items; track i ; let i = $index ){
+      <ion-col sizeLg="3" sizeMd="4" sizeSm="6" sizeXl="3" sizeXs="6">
+        <ion-card>
+          <ion-thumbnail>
+            <ion-img [src]="item?.image"></ion-img>
+          </ion-thumbnail>
+          <p>{{item?.price}}</p>
+        </ion-card>
+      </ion-col> 
+    }
+    
+  </ion-row>
+</ion-content>
