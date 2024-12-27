@@ -14,10 +14,16 @@
     @for(item of items; track i ; let i = $index ){
       <ion-col sizeLg="3" sizeMd="4" sizeSm="6" sizeXl="3" sizeXs="6">
         <ion-card>
-          <ion-thumbnail>
+          <div class="px-5 py-2 flex justify-center">
             <ion-img [src]="item?.image"></ion-img>
-          </ion-thumbnail>
-          <p>{{item?.price}}</p>
+          </div>
+          <div class="h-24">
+            <p class="text-center font-bold text-lg">{{item?.name}}</p>
+            <div class="flex mx-5 justify-between gap-2">
+              <p class=" text-lg text-blue-400">Php{{item?.price}}</p>
+              <button class="bg-blue-500 rounded-3xl px-2 text-white"><i class="fa-solid fa-plus text-lg font-bold"></i></button>
+            </div>
+          </div>
         </ion-card>
       </ion-col> 
     }
